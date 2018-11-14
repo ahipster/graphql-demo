@@ -1,0 +1,20 @@
+query {
+  customer(customerId:"2") {
+    customerId
+    lastName
+    firstName
+    personalIdNumber
+    arrangements {
+      arrangementId
+      accountNumber
+      arrangementName
+      validFrom
+      validTo
+      product {
+        productId
+        productType
+        productName
+      }
+    }
+  }
+}

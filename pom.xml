@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>se.seb.mdm.buildstuff</groupId>
+    <artifactId>graphql-demo</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.6.RELEASE</version>
+    </parent>
+
+    <modules>
+        <module>controllers</module>
+        <module>services</module>
+        <module>domains</module>
+        <module>graphql</module>
+    </modules>
+
+    <properties>
+        <!-- JAVA version and encoding-->
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- Dependencies version -->
+        <lombok.version>1.18.2</lombok.version>
+        <springfox.swagger.version>2.9.0</springfox.swagger.version>
+        <graphql.version>5.0.5</graphql.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>jcenter</id>
+            <url>https://jcenter.bintray.com/</url>
+        </repository>
+    </repositories>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- Lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- OpenApi -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox.swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox.swagger.version}</version>
+            </dependency>
+
+
+            <!--  GraphQL -->
+            <dependency>
+                <groupId>com.graphql-java-kickstart</groupId>
+                <artifactId>graphql-spring-boot-starter</artifactId>
+                <version>${graphql.version}</version>
+            </dependency>
+
+            <!-- to embed GraphiQL tool -->
+            <dependency>
+                <groupId>com.graphql-java-kickstart</groupId>
+                <artifactId>graphiql-spring-boot-starter</artifactId>
+                <version>${graphql.version}</version>
+            </dependency>
+            <!-- to embed Voyager tool -->
+            <dependency>
+                <groupId>com.graphql-java-kickstart</groupId>
+                <artifactId>voyager-spring-boot-starter</artifactId>
+                <version>${graphql.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

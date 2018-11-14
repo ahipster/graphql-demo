@@ -1,0 +1,32 @@
+schema {
+    query: Query
+}
+
+type Query {
+    customer(customerId: String!): Customer
+}
+
+type Customer {
+    customerId: String,
+    personalIdNumber: String,
+
+    firstName: String,
+    lastName: String,
+    arrangements: [Arrangement]
+}
+
+type Arrangement {
+    customerId: String,
+    arrangementId: String,
+    accountNumber: String,
+    arrangementName: String,
+    validFrom: String,
+    validTo: String,
+    product: Product
+}
+
+type Product {
+    productId: String,
+    productName: String,
+    productType: String
+}
