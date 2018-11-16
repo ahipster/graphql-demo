@@ -30,7 +30,7 @@
         <dependency>
             <groupId>com.graphql-java-kickstart</groupId>
             <artifactId>graphiql-spring-boot-starter</artifactId>
-            <version>${graphql.version}</version>
+            <version>5.0.7-SNAPSHOT</version>
         </dependency>
         <!-- to embed Voyager tool -->
         <dependency>

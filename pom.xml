@@ -30,7 +30,7 @@
         <!-- Dependencies version -->
         <lombok.version>1.18.2</lombok.version>
         <springfox.swagger.version>2.9.0</springfox.swagger.version>
-        <graphql.version>5.0.5</graphql.version>
+        <graphql.version>5.0.6</graphql.version>
     </properties>
 
     <repositories>
@@ -75,7 +75,7 @@
             <dependency>
                 <groupId>com.graphql-java-kickstart</groupId>
                 <artifactId>graphiql-spring-boot-starter</artifactId>
-                <version>${graphql.version}</version>
+                <version>5.0.7-SNAPSHOT</version>
             </dependency>
             <!-- to embed Voyager tool -->
             <dependency>

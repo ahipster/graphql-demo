@@ -1,6 +1,7 @@
 package se.seb.mdm.buildstuff;
 
 import com.coxautodev.graphql.tools.GraphQLResolver;
+import graphql.schema.DataFetchingEnvironment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

@@ -18,7 +18,7 @@ public class SwaggerConfig {
         Docket docket = new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.any())
-                .paths(PathSelectors.regex("/.*"))
+                .paths(PathSelectors.regex("/v1/.*"))
                 .build()
                 .useDefaultResponseMessages(false);
 

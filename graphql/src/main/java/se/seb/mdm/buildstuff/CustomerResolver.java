@@ -10,13 +10,10 @@ import java.util.List;
 public class CustomerResolver implements GraphQLResolver<Customer> {
 
     private ArrangementService arrangementService;
-    private ProductService productService;
-
 
     @Autowired
-    public CustomerResolver(ArrangementService arrangementService, ProductService productService) {
+    public CustomerResolver(ArrangementService arrangementService) {
         this.arrangementService = arrangementService;
-        this.productService = productService;
     }
 
     public List<Arrangement> arrangements(Customer customer) {
